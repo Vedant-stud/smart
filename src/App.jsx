@@ -1,7 +1,7 @@
 import { Navigate, Route, Routes } from "react-router-dom";
 import AppLayout from "./components/AppLayout.jsx";
 import ProtectedRoute from "./components/ProtectedRoute.jsx";
-import Chatbot from "./pages/Chatbot.jsx";
+import Chatbot from "./components/Chatbot.jsx";
 import Crops from "./pages/Crops.jsx";
 import Dashboard from "./pages/Dashboard.jsx";
 import Disease from "./pages/Disease.jsx";
