@@ -1,0 +1,98 @@
+[
+  {
+    "id": "kb001",
+    "title": "Irrigation Timing for Wheat",
+    "category": "irrigation",
+    "content": "Wheat requires critical irrigation at the crown root initiation stage (18-21 days after sowing), followed by the tillering, jointing, flowering, and grain-filling stages. Avoid irrigation immediately before expected heavy rainfall to prevent waterlogging and nutrient leaching. Light, frequent irrigation is preferable on sandy soils; deeper, less frequent irrigation suits clay soils."
+  },
+  {
+    "id": "kb002",
+    "title": "Cotton Water Management",
+    "category": "irrigation",
+    "content": "Cotton is sensitive to both drought and waterlogging during the flowering and boll development stage. Maintain consistent soil moisture during flowering; reduce irrigation frequency as bolls mature to encourage boll opening and reduce boll rot risk."
+  },
+  {
+    "id": "kb003",
+    "title": "Rice Paddy Water Requirements",
+    "category": "irrigation",
+    "content": "Rice generally requires standing water of 5-10 cm during the vegetative stage. Alternate wetting and drying (AWD) can reduce water use by up to 30% without significant yield loss, and also reduces methane emissions."
+  },
+  {
+    "id": "kb004",
+    "title": "Nitrogen Deficiency Symptoms",
+    "category": "fertilizer",
+    "content": "Nitrogen deficiency typically appears as yellowing (chlorosis) starting from older, lower leaves, since nitrogen is mobile within the plant. Split nitrogen application - basal dose at sowing, followed by top-dressing at tillering and flowering - improves uptake efficiency compared to a single large dose."
+  },
+  {
+    "id": "kb005",
+    "title": "Phosphorus and Root Development",
+    "category": "fertilizer",
+    "content": "Phosphorus is critical for root establishment and is best applied at or before sowing since it moves slowly through soil. Cold, wet, or highly acidic/alkaline soils reduce phosphorus availability even when soil test levels appear adequate."
+  },
+  {
+    "id": "kb006",
+    "title": "Potassium and Drought/Disease Resistance",
+    "category": "fertilizer",
+    "content": "Potassium improves water regulation, drought tolerance, and resistance to certain fungal diseases. Deficiency shows as scorching or browning at leaf margins, starting with older leaves. Sandy soils are more prone to potassium leaching and may need split applications."
+  },
+  {
+    "id": "kb007",
+    "title": "Soil pH and Nutrient Availability",
+    "category": "soil",
+    "content": "Most staple crops perform best in a soil pH range of 6.0-7.5. Below pH 5.5, aluminum and manganese toxicity risk increases and phosphorus becomes less available. Above pH 8, iron, zinc, and manganese availability drops, which can cause micronutrient deficiencies even in nutrient-rich soil."
+  },
+  {
+    "id": "kb008",
+    "title": "Organic Carbon and Soil Health",
+    "category": "soil",
+    "content": "Soil organic carbon above 0.75% is generally considered adequate for sustaining microbial activity and nutrient cycling. Below 0.5%, soils typically show poor structure, lower water-holding capacity, and reduced fertilizer-use efficiency. Incorporating crop residue and green manure raises organic carbon over multiple seasons."
+  },
+  {
+    "id": "kb009",
+    "title": "Wheat Rust Disease Management",
+    "category": "disease",
+    "content": "Yellow, brown, and black rust in wheat spread rapidly under cool, humid conditions with morning dew. Early symptoms are powdery orange-yellow pustules on leaves. Resistant varieties are the most sustainable control; fungicide application is most effective when applied at first symptom appearance rather than after widespread infection."
+  },
+  {
+    "id": "kb010",
+    "title": "Cotton Bollworm Pest Risk",
+    "category": "disease",
+    "content": "Bollworm risk increases significantly during warm, humid weather following flowering. Regular field scouting during early morning hours, pheromone traps for early detection, and avoiding unnecessary broad-spectrum insecticide use (which kills natural predators) are recommended integrated pest management practices."
+  },
+  {
+    "id": "kb011",
+    "title": "Rice Blast Disease",
+    "category": "disease",
+    "content": "Rice blast fungus thrives in conditions of high humidity, extended leaf wetness, and nitrogen over-application. Diamond-shaped lesions with gray centers on leaves are the characteristic symptom. Balanced nitrogen application and avoiding dense sowing which restricts airflow both reduce disease pressure."
+  },
+  {
+    "id": "kb012",
+    "title": "Rainfall and Irrigation Scheduling",
+    "category": "weather",
+    "content": "When rain probability exceeds 60% within 24-48 hours, irrigation should generally be postponed to avoid water wastage, nutrient runoff, and waterlogging stress on root systems. Fields should be monitored after significant rainfall events for standing water and drainage issues, especially on clay-heavy soils."
+  },
+  {
+    "id": "kb013",
+    "title": "Heat Stress in Flowering Crops",
+    "category": "weather",
+    "content": "Temperatures above 35C during flowering can cause pollen sterility and flower drop in many crops including wheat, tomato, and pulses. Light irrigation timed to cool the canopy in the early morning, and avoiding fertilizer application during heat spikes, can reduce stress-related yield loss."
+  },
+  {
+    "id": "kb014",
+    "title": "Crop Rotation Benefits",
+    "category": "general",
+    "content": "Rotating between crop families (e.g., cereals followed by legumes) breaks pest and disease life cycles that build up in soil, and legumes fix atmospheric nitrogen which reduces fertilizer requirements for the following crop. Continuous monocropping of the same crop family tends to increase soil-borne disease pressure over time."
+  },
+  {
+    "id": "kb015",
+    "title": "Selecting Crops for Sandy Soil",
+    "category": "crop_selection",
+    "content": "Sandy soils drain quickly and hold fewer nutrients, favoring drought-tolerant, deep-rooted crops such as groundnut, millet, and certain pulses. Frequent light irrigation and organic matter incorporation improve water and nutrient retention on sandy soils."
+  },
+  {
+    "id": "kb016",
+    "title": "Selecting Crops for Clay Soil",
+    "category": "crop_selection",
+    "content": "Clay soils retain water and nutrients well but drain slowly and can become waterlogged. Rice performs particularly well on clay soils that hold standing water; for upland crops on clay, raised-bed planting improves drainage and reduces root-rot risk."
+  }
+]

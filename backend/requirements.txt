@@ -1,0 +1,26 @@
+# --- Core web framework ---
+fastapi==0.115.0
+uvicorn[standard]==0.30.6
+
+# --- Database ---
+SQLAlchemy==2.0.35
+
+# --- Validation / settings ---
+pydantic==2.9.2
+pydantic-settings==2.5.2
+email-validator==2.2.0
+
+# --- Auth ---
+# bcrypt is pinned <4.1 because passlib 1.7.4's version-detection code
+# reads a bcrypt.__about__ attribute that bcrypt>=4.1 removed - hashing
+# still works either way, but this pin avoids a noisy startup warning.
+python-jose[cryptography]==3.3.0
+passlib[bcrypt]==1.7.4
+bcrypt==4.0.1
+python-multipart==0.0.9
+
+# --- Config loading ---
+python-dotenv==1.0.1
+
+# --- PDF report generation (Section 16: Reporting Module) ---
+reportlab==4.2.5
