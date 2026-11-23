@@ -5,7 +5,7 @@ from fastapi import APIRouter, Depends, UploadFile, File
 from sqlalchemy.orm import Session
 
 from app.db.database import get_db
-from app.db.deps import get_current_user
+from app.db.deps import get_accessible_farm_or_404, get_current_user
 from app.models.user import User
 from app.models.recommendation import Recommendation
 from app.schemas.disease import DiseaseDetectionResult
@@ -16,6 +16,7 @@ router = APIRouter(prefix="/api/disease", tags=["Disease Detection"])
 
 @router.post("/detect", response_model=DiseaseDetectionResult)
 async def detect(farm_id: int, file: UploadFile = File(...), db: Session = Depends(get_db), user: User = Depends(get_current_user)):
+    get_accessible_farm_or_404(db, farm_id, user)
     image_bytes = await file.read()
     result = classify_leaf_image(image_bytes, file.filename or "upload")
 

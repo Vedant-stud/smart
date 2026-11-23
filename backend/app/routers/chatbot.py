@@ -7,10 +7,9 @@ from fastapi import APIRouter, Depends
 from sqlalchemy.orm import Session
 
 from app.db.database import get_db
-from app.db.deps import get_current_user
+from app.db.deps import get_accessible_farm_or_404, get_current_user
 from app.models.user import User
 from app.models.chat import ChatMessage
-from app.models.farm import Farm
 from app.schemas.chat import ChatRequest, ChatResponse, ChatSource
 from app.services.rag_service import get_rag_engine
 
@@ -23,13 +22,12 @@ def ask(payload: ChatRequest, db: Session = Depends(get_db), user: User = Depend
     retrieved = engine.retrieve(payload.message)
 
     farm_context = ""
-    if payload.farm_id:
-        farm = db.query(Farm).filter(Farm.id == payload.farm_id).first()
-        if farm:
-            farm_context = (
-                f"For your farm '{farm.name}' ({farm.soil_type or 'unspecified'} soil, "
-                f"{'irrigation available' if farm.irrigation_available else 'no irrigation available'}):"
-            )
+    if payload.farm_id is not None:
+        farm = get_accessible_farm_or_404(db, payload.farm_id, user)
+        farm_context = (
+            f"For your farm '{farm.name}' ({farm.soil_type or 'unspecified'} soil, "
+            f"{'irrigation available' if farm.irrigation_available else 'no irrigation available'}):"
+        )
 
     reply = engine.generate(payload.message, retrieved, farm_context=farm_context)
 

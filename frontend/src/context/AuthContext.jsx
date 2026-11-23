@@ -46,8 +46,8 @@ export function AuthProvider({ children }) {
     return res.data.user;
   };
 
-  const register = async (full_name, email, password, role) => {
-    const res = await client.post("/api/auth/register", { full_name, email, password, role });
+  const register = async (full_name, email, password) => {
+    const res = await client.post("/api/auth/register", { full_name, email, password });
     localStorage.setItem("sca_token", res.data.access_token);
     localStorage.setItem("sca_user", JSON.stringify(res.data.user));
     setUser(res.data.user);

@@ -4,17 +4,10 @@ import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { useAuth } from "../context/AuthContext.jsx";
 
-const ROLES = [
-  { value: "farmer", label: "Farmer" },
-  { value: "agronomist", label: "Agronomist" },
-  { value: "researcher", label: "Researcher" },
-  { value: "admin", label: "Administrator" },
-];
-
 export default function Register() {
   const { register } = useAuth();
   const navigate = useNavigate();
-  const [form, setForm] = useState({ full_name: "", email: "", password: "", role: "farmer" });
+  const [form, setForm] = useState({ full_name: "", email: "", password: "" });
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
 
@@ -25,7 +18,7 @@ export default function Register() {
     setError("");
     setLoading(true);
     try {
-      await register(form.full_name, form.email, form.password, form.role);
+      await register(form.full_name, form.email, form.password);
       navigate("/");
     } catch (err) {
       setError(err.response?.data?.detail || "Something went wrong. Please try again.");
@@ -71,16 +64,6 @@ export default function Register() {
           <div>
             <label className="label-text">Password</label>
             <input type="password" required minLength={6} className="input-field" value={form.password} onChange={update("password")} placeholder="At least 6 characters" />
-          </div>
-          <div>
-            <label className="label-text">Role</label>
-            <select className="input-field" value={form.role} onChange={update("role")}>
-              {ROLES.map((r) => (
-                <option key={r.value} value={r.value}>
-                  {r.label}
-                </option>
-              ))}
-            </select>
           </div>
           <motion.button whileTap={{ scale: 0.98 }} type="submit" disabled={loading} className="btn-primary w-full mt-2">
             <UserPlus size={17} />

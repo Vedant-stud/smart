@@ -1,5 +1,5 @@
 from datetime import datetime
-from typing import Optional
+from typing import Literal, Optional
 from pydantic import BaseModel, EmailStr, Field
 
 
@@ -7,7 +7,7 @@ class UserCreate(BaseModel):
     full_name: str = Field(min_length=2, max_length=120)
     email: EmailStr
     password: str = Field(min_length=6, max_length=100)
-    role: str = Field(default="farmer", pattern="^(admin|farmer|agronomist|researcher)$")
+    role: Literal["farmer"] = "farmer"
     organization: Optional[str] = None
     phone: Optional[str] = None
 

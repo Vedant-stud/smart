@@ -73,6 +73,9 @@ npm run dev
 ```
 
 Open `http://localhost:5173`, click **Create an account**, and you're in.
+Self-service registrations create farmer accounts; elevated roles must be
+assigned by a trusted administrator. Farmers can access their own farms,
+while admins, agronomists, and researchers can access all farms.
 
 ## Project structure
 
