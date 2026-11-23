@@ -57,6 +57,12 @@ The API is now live at `http://localhost:8000` (interactive docs at
 `http://localhost:8000/docs`). A `smart_crop_advisor.db` SQLite file is
 created automatically on first run.
 
+For a Render backend service, set its **Root Directory** to `backend`. The
+`backend/.python-version` file pins the service to Python 3.12.8, which has a
+prebuilt `pydantic_core` wheel for the version pinned in `requirements.txt`.
+If the service has a `PYTHON_VERSION` environment variable, set it to
+`3.12.8` as well so it does not override the file.
+
 ### 2. Frontend
 
 ```bash
