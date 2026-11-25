@@ -63,6 +63,13 @@ prebuilt `pydantic_core` wheel for the version pinned in `requirements.txt`.
 If the service has a `PYTHON_VERSION` environment variable, set it to
 `3.12.8` as well so it does not override the file.
 
+To deploy the full stack from GitHub, create a Render Blueprint from this
+repository and use the root `render.yaml` file. It provisions the API, static
+frontend, and PostgreSQL database; pushes to the connected branch trigger
+deploys. The free API service can sleep when idle, and Render's free database
+has plan limits, so review Render's current pricing and retention policy before
+using it for important data.
+
 ### 2. Frontend
 
 ```bash
